@@ -1,0 +1,111 @@
+.App {
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Material Design 3 Color System */
+:root {
+  /* Primary colors */
+  --md-sys-color-primary: #1976d2;
+  --md-sys-color-primary-hover: #1565c0;
+  --md-sys-color-on-primary: #ffffff;
+
+  /* Surface colors */
+  --md-sys-color-surface: #ffffff;
+  --md-sys-color-surface-variant: #f5f5f5;
+  --md-sys-color-on-surface: #1c1b1f;
+  --md-sys-color-on-surface-variant: #49454f;
+
+  /* Outline colors */
+  --md-sys-color-outline: #79747e;
+  --md-sys-color-outline-variant: #cac4d0;
+
+  /* Error colors */
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error: #ffffff;
+
+  /* Inverse colors for toast */
+  --md-sys-color-inverse-surface: #2f2f2f;
+  --md-sys-color-inverse-on-surface: #f5f5f5;
+}
+
+.error-container {
+  max-width: 1200px;
+  margin: 64px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.error-container h1 {
+  color: #d32f2f;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.error-container p {
+  color: #666;
+  font-size: 18px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--md-sys-color-surface);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--md-sys-color-outline-variant);
+  border-top: 4px solid var(--md-sys-color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.loading-container p {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App {
+    padding-bottom: 16px;
+  }
+
+  .error-container {
+    margin: 32px auto;
+    padding: 0 8px;
+  }
+
+  .error-container h1 {
+    font-size: 24px;
+  }
+
+  .error-container p {
+    font-size: 16px;
+  }
+}

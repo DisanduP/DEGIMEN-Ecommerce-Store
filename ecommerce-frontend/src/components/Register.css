@@ -1,0 +1,307 @@
+.register-page {
+  min-height: 100vh;
+  background-color: var(--md-sys-color-surface);
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container {
+  max-width: 480px;
+  width: 100%;
+  background-color: var(--md-sys-color-surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.register-header {
+  text-align: center;
+  padding: 32px 24px 24px;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.register-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--md-sys-color-on-surface);
+}
+
+.register-header p {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1rem;
+}
+
+.register-form {
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
+  font-size: 0.875rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1);
+}
+
+.form-input.error {
+  border-color: var(--md-sys-color-error);
+}
+
+.form-input.error:focus {
+  box-shadow: 0 0 0 2px rgba(186, 26, 26, 0.1);
+}
+
+.form-input:disabled {
+  background-color: var(--md-sys-color-surface-variant);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.error-message {
+  display: block;
+  margin-top: 4px;
+  color: var(--md-sys-color-error);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.general-error {
+  background-color: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--md-sys-color-error);
+}
+
+.password-requirements {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--md-sys-color-on-surface-variant);
+  line-height: 1.4;
+}
+
+.checkbox-group {
+  margin-bottom: 16px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--md-sys-color-on-surface);
+  position: relative;
+}
+
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  background-color: var(--md-sys-color-surface);
+  border: 2px solid var(--md-sys-color-outline);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkmark {
+  background-color: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkmark::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-label input[type="checkbox"]:focus ~ .checkmark {
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.checkbox-label a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+.register-button {
+  width: 100%;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.register-button:hover:not(:disabled) {
+  background-color: var(--md-sys-color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.register-button:disabled {
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.login-link a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.success-message {
+  text-align: center;
+  padding: 60px 24px;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 24px;
+}
+
+.success-message h2 {
+  margin: 0 0 8px 0;
+  color: var(--md-sys-color-on-surface);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.success-message p {
+  margin: 0 0 24px 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1rem;
+}
+
+.success-message .login-link {
+  display: inline-block;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.success-message .login-link:hover {
+  background-color: var(--md-sys-color-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .register-page {
+    padding: 16px 12px;
+  }
+
+  .register-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .register-header {
+    padding: 24px 20px 20px;
+  }
+
+  .register-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .register-form {
+    padding: 20px;
+  }
+
+  .form-input {
+    padding: 14px;
+  }
+
+  .register-button {
+    padding: 14px;
+  }
+
+  .success-message {
+    padding: 40px 20px;
+  }
+
+  .success-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+}

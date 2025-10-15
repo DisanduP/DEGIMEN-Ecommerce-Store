@@ -1,0 +1,24 @@
+{
+    "name": "ecommerce-store",
+    "buildCommand": "npm run build",
+    "outputLocation": "build",
+    "apiLocation": "",
+    "appBuildCommand": "npm run build",
+    "appLocation": "/",
+    "routes": [
+        {
+            "route": "/*",
+            "allowedRoles": [
+                "anonymous"
+            ]
+        }
+    ],
+    "responseOverrides": {
+        "404": {
+            "rewrite": "/index.html"
+        }
+    },
+    "globalHeaders": {
+        "Cache-Control": "no-cache"
+    }
+}
